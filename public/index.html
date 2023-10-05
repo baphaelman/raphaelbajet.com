@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Raphaël Bajet | Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scheme-button-div">
+        <button id="scheme-button">Too dark?</button>
+    </div>
+
+    <div class="pfp">
+        <img src="https://i.ibb.co/Srqc2w6/personal-Website-Picture.jpg" width="200" height="200">
+    </div>
+    
+    <div class="name">
+        <h1>Hello! My name is Raphaël Bajet.</h1>
+    </div>
+    <div class="subtitle">
+        <h2>Call me Raphaël.</h2>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li class="link">
+                <a href="/hobbies" class="linkText">Hobbies</a>
+            </li>
+            <li class="link">
+                <a href="/dogs" class="linkText">Dogs</a>
+            </li>
+            <li class="link">
+                <a href="/art" class="linkText">Art</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="list">
+        <div class="socialsButtonContainer">
+            <a href="https://www.instagram.com/rafel_falafel/" class="socialsButton">
+                <img src="https://simpleicons.org/icons/instagram.svg" class="socialsImage">
+            </a>
+        </div>
+        <div class="socialsButtonContainer">
+            <a href="https://github.com/baphaelman" class="socialsButton">
+                <img src="https://simpleicons.org/icons/github.svg" class="socialsImage">
+            </a>
+        </div>
+        <div class="socialsButtonContainer">
+            <a href="https://open.spotify.com/user/baphael" class="socialsButton">
+                <img src="https://simpleicons.org/icons/spotify.svg" class="socialsImage">
+            </a>
+        </div>
+    </div>  
+
+<div id="weather">
+        <p class="p-inline weather-banner">Raphaël is currently enjoying a</p>
+        <p class="p-inline" id="weather-text"></p>
+        <p class="p-inline weather-banner">at</p>
+        <p class="p-inline" id="temperature-text"></p>
+        <p class="p-inline weather-banner">in Berkeley.</p>
+</div>
+
+
+<script src='./main.js'></script>
+
+<script>
+    // Fetch weather data from Express route
+    fetch('/weather')
+      .then(response => response.json())
+      .then(data => {
+        const temperatureText = document.getElementById('temperature-text');
+        const weatherText = document.getElementById('weather-text');
+        temperatureText.innerText = `${data.main.temp}°C`
+        weatherText.innerText = `${data.weather[0].description}`;
+      })
+  </script>
+
+</body>
+</html>

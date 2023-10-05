@@ -1,0 +1,307 @@
+
+:root{
+  --black:black;  
+  --bg: #09101e;  
+  --lightblue: #748cab;
+  --darkblue: #1d2d44;
+  --offwhite: #f0ebd8;
+}
+
+  img {
+  max-width: 100%;
+}
+
+body {
+    color: var(--offwhite);
+    font-family: Poppins, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+}
+
+body.light{
+ color: var(--black);
+ background-color: var(--offwhite);
+}
+
+.name {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.list {
+    text-align: center; /* Center the inline-block items horizontally */
+    justify-content: center;
+    margin: 0px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0px;  
+}
+
+/* Button link color and decoration */
+.linkText {
+  text-decoration: none;
+  color: var(--offwhite);
+  padding: 30px;
+  width: 100px;
+}
+
+.linkText.light {
+  color: var(--black);
+}
+
+  .list li {
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px;
+    width: 150px;
+    margin: 30px; /* Add some spacing between the items */
+    border: 10px solid var(--darkblue);
+    border-radius: 75px;
+    background-color: var(--darkblue);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .list li.light {
+    border: 10px solid var(--lightblue);
+    background-color: var(--lightblue);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .link:hover {
+    background-color: var(--lightblue);
+    border-color: var(--lightblue);
+  }
+
+  .link.light:hover {
+    background-color: var(--darkblue);
+    border-color: var(--darkblue);
+  }
+
+  .pfp {
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+  }
+  
+  .pfp img {
+    border-radius: 50%;
+  }
+  
+
+
+  .socialsButtonContainer {
+    display: inline-block;
+  }
+  
+  .socialsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+    background-color: var(--lightblue);
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    transition: background-color 0.25s ease;
+  }
+
+  .socialsButton.light {
+    background-color: var(--darkblue);
+    transition: background-colod 0.25s ease;
+  }
+
+  .socialsImage {
+    height: 30px;
+    width: 30px;
+  }
+
+  .socialsButton:hover {
+    background-color: var(--offwhite);
+  }
+
+  .socialsButton.light:hover {
+    background-color: var(--black);
+  }
+
+.page-header {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 50px;
+}
+
+/* weather */
+
+#weather {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.p-inline {
+  display: inline;
+  margin: 2px;
+}
+
+/* scheme button */
+
+#scheme-button {
+  color: var(--offwhite);
+  font-size: 15px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--darkblue);
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.25s ease;
+}
+
+#scheme-button.light {
+color: var(--black);
+background-color: var(--lightblue);
+transition: background-color 0.25s ease;
+}
+
+#scheme-button:hover {
+  background-color: var(--lightblue);
+}
+
+#scheme-button.light:hover {
+  background-color: var(--offwhite);
+}
+
+#scheme-button-div {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* Home button */
+
+#home-button {
+  color: var(--offwhite);
+  font-size: 15px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--darkblue);
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.25s ease;
+}
+
+#home-button.light {
+color: var(--black);
+background-color: var(--lightblue);
+transition: background-color 0.25s ease;
+}
+
+#home-button:hover {
+  background-color: var(--lightblue);
+}
+
+#home-button.light:hover {
+  background-color: var(--offwhite);
+}
+
+#home-button-div {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+/* General styling for galleries */
+
+  .image-gallery {
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px;
+  }
+
+  .image-and-caption {
+    text-align: center;
+    margin: 30px;
+  }
+
+  .caption {
+    margin-top: 10px;
+  }
+
+  .dog-image {
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+
+  .hobbies-image {
+    width: 400px;
+    border-radius: 25px;
+    transition: width 0.5s ease;
+  }
+
+.art-image {
+  width: 400px;
+  border-radius: 25px;
+  transition: width 0.5s ease;
+ }
+
+  .section-header {
+    margin-left: 125px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+  }
+
+    /* Styling for dogs page */
+
+    .dog-email-container {
+  position: fixed;
+  left: 50vw;
+  transform: translate(-50%, 0);
+  bottom: 30px;
+}
+
+.dog-email {
+  font-size: 15px;
+    padding: 10px;
+    border: 10px solid var(--darkblue);
+    border-radius: 75px;
+    background-color: var(--darkblue);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.dog-email.light {
+  border: 10px solid var(--darkblue);
+  background-color: var(--darkblue);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.dog-email:hover {
+  background-color: var(--lightblue);
+  border-color: var(--lightblue);
+}
+
+.dog-email.light:hover {
+  background-color: var(--lightblue);
+  border-color: var(--lightblue);
+}
+
+.dog-email-text {
+  text-decoration: none;
+  color: var(--offwhite);
+  padding: 10px;
+}
+
+.dog-email-text.light {
+  color: var(--offwhite);
+}
