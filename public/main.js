@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const schemeButton = document.getElementById('scheme-button');
   const body = document.body;
   const homeButton = document.getElementById('home-button');
-  const pageNames = ['art', 'dogs', 'hobbies'];
 
   let currentMode = localStorage.getItem('mode');
 
@@ -11,11 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
       function toggle() {
         if (currentMode === 'light') {
           body.classList.toggle('light');
-          schemeButton.innerText = 'Too dark?';
+          schemeButton.style.backgroundImage = 'url(sun.png)';
+          schemeButton.style.backgroundSize = '50px 50px';
+          schemeButton.style.backgroundRepeat = 'no-repeat';
+          schemeButton.style.backgroundPosition = 'center';
           currentMode = 'dark';
         } else {
           body.classList.toggle('light');
-          schemeButton.innerText = 'Too bright?'
+          schemeButton.style.backgroundImage = 'url(moon.png)';
+          schemeButton.style.backgroundSize = '50px 50px';
+          schemeButton.style.backgroundRepeat = 'no-repeat';
+          schemeButton.style.backgroundPosition = 'center';
           currentMode = 'light';
         }
       
@@ -29,10 +34,16 @@ document.addEventListener('DOMContentLoaded', function () {
       // Set the initial mode based on localStorage, default to dark mode
       if (currentMode === 'light') {
         body.classList.add('light');
-        schemeButton.innerText = 'Too bright?'
+        schemeButton.style.backgroundImage = 'url(moon.png)';
+        schemeButton.style.backgroundSize = '40px 40px';
+        schemeButton.style.backgroundRepeat = 'no-repeat';
+        schemeButton.style.backgroundPosition = 'center';
       } else {
         body.classList.remove('light');
-        schemeButton.innerText = 'Too dark?'
+        schemeButton.style.backgroundImage = 'url(sun.png)';
+          schemeButton.style.backgroundSize = '40px 40px';
+          schemeButton.style.backgroundRepeat = 'no-repeat';
+          schemeButton.style.backgroundPosition = 'center';
       }
       
       // home button functionality

@@ -52,11 +52,7 @@ body.light{
   width: 100px;
 }
 
-.linkText.light {
-  color: var(--black);
-}
-
-  .list li {
+  .link {
     font-size: 20px;
     display: inline-block;
     padding: 20px;
@@ -68,21 +64,15 @@ body.light{
     transition: background-color 0.25s ease, border-color 0.25s ease;
   }
 
-  .list li.light {
-    border: 10px solid var(--lightblue);
-    background-color: var(--lightblue);
-    transition: background-color 0.25s ease, border-color 0.25s ease;
-  }
-
   .link:hover {
     background-color: var(--lightblue);
     border-color: var(--lightblue);
   }
 
-  .link.light:hover {
-    background-color: var(--darkblue);
-    border-color: var(--darkblue);
-  }
+.list {
+  display: flex;
+}
+
 
   .pfp {
     display: block;
@@ -181,8 +171,8 @@ transition: background-color 0.25s ease;
 
 #scheme-button-div {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 25px;
+  right: 50px;
 }
 
 /* Home button */
@@ -214,8 +204,8 @@ transition: background-color 0.25s ease;
 
 #home-button-div {
   position: fixed;
-  top: 50px;
-  right: 50px;
+  top: 25px;
+  left: 50px;
 }
 
 /* General styling for galleries */

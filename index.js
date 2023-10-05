@@ -3,6 +3,11 @@ const fs = require('fs');
 const port = 3000;
 const axios = require('axios');
 
+require('dotenv').config();
+
+const apiKey = process.env.API_KEY;
+console.log(apiKey);
+
 
 const app = express();
 
@@ -28,7 +33,6 @@ app.get('/', (req, res) => {
 
 app.get('/weather', async (req, res) => {
       try {
-        const apiKey = 'c80257582dc7d0c63802915aae73fc47';
         const city = 'Berkeley';
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     
@@ -38,6 +42,7 @@ app.get('/weather', async (req, res) => {
         res.json(weatherData);
       } catch (error) {
         console.error('Error fetching weather data:', error);
+        console.error('API URL: ', apiUrl);
         res.status(500).json({ error: 'Could not fetch weather data' });
       }
     });
