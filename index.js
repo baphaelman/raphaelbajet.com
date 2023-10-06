@@ -11,23 +11,27 @@ console.log(apiKey);
 
 const app = express();
 
-app.use(express.static('public'));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
+    res.send('Express on Vercel');
   });
 
   app.get('/art/', (req, res) => {
     res.sendFile(__dirname + '/public/art.html');
+    res.send('Express on Vercel');
   });
 
   app.get('/dogs/', (req, res) => {
     res.sendFile(__dirname + '/public/dogs.html');
+    res.send('Express on Vercel');
   });
 
   app.get('/hobbies/', (req, res) => {
     res.sendFile(__dirname + '/public/hobbies.html');
+    res.send('Express on Vercel');
   });
 
 
@@ -45,9 +49,12 @@ app.get('/weather', async (req, res) => {
         console.error('API URL: ', apiUrl);
         res.status(500).json({ error: 'Could not fetch weather data' });
       }
+      res.send('Express on Vercel');
     });
 
 
 app.listen(port, () => {
   console.log(`Running on port ${port}`);
 });
+
+module.exports = app;
