@@ -16,7 +16,6 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
-    res.send('Express on Vercel');
   });
 
   app.get('/art/', (req, res) => {
